@@ -3,20 +3,19 @@ set(CMAKE_CXX_STANDARD 20)
 
 project(EvenMoreDifficulties VERSION 1.0.0)
 
-# Check all possible locations where build-geode-mod installs the SDK
-if(NOT DEFINED Geode_DIR)
-    if(DEFINED ENV{GEODE_SDK})
-        set(Geode_DIR "$ENV{GEODE_SDK}")
-    elseif(EXISTS "${CMAKE_SOURCE_DIR}/geode")
-        set(Geode_DIR "${CMAKE_SOURCE_DIR}/geode")
-    else()
-        set(Geode_DIR "/home/runner/work/geode")
-    endif()
+# If GEODE_SDK environment variable isn't set, download Geode SDK via FetchContent
+if(NOT DEFINED ENV{GEODE_SDK})
+    include(FetchContent)
+    FetchContent_Declare(
+        Geode
+        GIT_REPOSITORY https://github.com/geode-sdk/geode.git
+        GIT_TAG main
+    )
+    FetchContent_MakeAvailable(Geode)
+else()
+    list(APPEND CMAKE_PREFIX_PATH "$ENV{GEODE_SDK}")
+    find_package(Geode REQUIRED)
 endif()
-
-list(APPEND CMAKE_PREFIX_PATH "${Geode_DIR}")
-
-find_package(Geode REQUIRED)
 
 add_geode_mod(
     ${PROJECT_NAME}
