@@ -1,19 +1,19 @@
 {
-  "geode": "3.0.0",
-  "version": "v1.0.0",
-  "id": "sawyervroffica.even_more_difficulties",
-  "name": "Even More Difficulties",
-  "developer": "Sawyervroffica",
-  "description": "Adds Meh, Crazy, Meh Demon, and Impossible Demon difficulties to search filters.",
-  "resources": {
-    "spritesheets": {
-      "difficulties": [
-        "resources/meh.png",
-        "resources/crazy.png",
-        "resources/meh_demon.png",
-        "resources/impossible_demon.png"
-      ]
-    }
-  }
+	"geode": "2.0.0-beta.1",
+	"gd": {
+		"android": "2.206"
+	},
+	"id": "sawyervrofficial.evenmoredifficulties",
+	"name": "Even More Difficulties",
+	"version": "v1.0.0",
+	"developer": "sawyervrofficial",
+	"description": "Adds extra difficulties to Geometry Dash!",
+	"resources": {
+		"sprites": [
+			"resources/meh.png",
+			"resources/crazy.png",
+			"resources/meh_demon.png",
+			"resources/impossible_demon.png"
+		]
+	}
 }
-
