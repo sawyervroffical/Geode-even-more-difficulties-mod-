@@ -32,4 +32,3 @@ jobs:
         with:
           name: EvenMoreDifficulties-${{ matrix.config.target }}
           path: "*.geode"
-          
