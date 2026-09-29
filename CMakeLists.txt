@@ -10,4 +10,3 @@ add_geode_mod(
     SOURCES
         src/main.cpp
 )
-
