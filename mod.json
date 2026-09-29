@@ -1,0 +1,19 @@
+{
+  "geode": "3.0.0",
+  "version": "v1.0.0",
+  "id": "sawyervroffica.even_more_difficulties",
+  "name": "Even More Difficulties",
+  "developer": "Sawyervroffica",
+  "description": "Adds Meh, Crazy, Meh Demon, and Impossible Demon difficulties to search filters.",
+  "resources": {
+    "spritesheets": {
+      "difficulties": [
+        "resources/meh.png",
+        "resources/crazy.png",
+        "resources/meh_demon.png",
+        "resources/impossible_demon.png"
+      ]
+    }
+  }
+}
+
